@@ -1,124 +1,122 @@
-:root{
-	--card_size: 130px;
-	--card_margin: 8px;
-	--card_color: gold;
+:root {
+  --card_size: 130px;
+  --card_margin: 8px;
+  --card_color: gold;
 }
 
-#menuDiv{
-	display: inline-block;
-	border-right: 1px solid gold;
-	border-left: 1px solid gold;
-	width: 300px;
-	height: 100%;
-	color: gold;
-	
+#menuDiv {
+  display: inline-block;
+  border-right: 1px solid gold;
+  border-left: 1px solid gold;
+  width: 300px;
+  min-height: 100vh;
+  color: gold;
 }
 
-#menuDiv #titleDiv{
-	font-size: 30px;
-	font-weight: 500;
-	padding: 5px;
-	text-align: center;
+#menuDiv #titleDiv {
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px;
+  text-align: center;
 }
 
-#menuDiv #gameModeDiv{
-	margin-top: 60px;
+#menuDiv #gameModeDiv {
+  margin-top: 60px;
 }
 
-#menuDiv #gridSizeDiv{
-	margin-top: 60px;
+#menuDiv #gridSizeDiv {
+  margin-top: 60px;
 }
 
-#menuDiv #startButtonDiv{
-	text-align: center;
-	margin-top: 60px;
-	border: 2px solid gold;
-	width: 150px;
-	margin-left: 70px;
-	padding: 10px;
-	padding-bottom: 60px;
-	padding-top: 60px;
-	cursor: pointer;
+#menuDiv #startButtonDiv {
+  text-align: center;
+  margin-top: 60px;
+  border: 2px solid gold;
+  width: 150px;
+  margin-left: 70px;
+  padding: 10px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  cursor: pointer;
 }
 
-#menuDiv #startButtonDiv:hover{
-	background-color: #222;
+#menuDiv #startButtonDiv:hover {
+  background-color: #222;
 }
 
-#menuDiv .selectDiv{
-	width: 150px;
-	margin: 10px;
-	margin-left: 70px;
-	padding: 10px;
-	text-align: center;
+#menuDiv .selectDiv {
+  width: 150px;
+  margin: 10px;
+  margin-left: 70px;
+  padding: 10px;
+  text-align: center;
 }
 
-.selectDiv[selected = "true"]{
-	font-weight: 600;
-	cursor: default;
-	border: 2px solid gold;
+.selectDiv[selected="true"] {
+  font-weight: 600;
+  cursor: default;
+  border: 2px solid gold;
 }
 
-.selectDiv[selected = "false"]{
-	font-weight: 400;
-	cursor: pointer;
-	border: 1px solid silver;
+.selectDiv[selected="false"] {
+  font-weight: 400;
+  cursor: pointer;
+  border: 1px solid silver;
 }
 
-.selectDiv[selected = "false"]:hover{
-	background-color: #222;
+.selectDiv[selected="false"]:hover {
+  background-color: #222;
 }
 
-body{
-	background-color: #111;
-	font-family: Helvetica;
-	user-select: none;
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	text-align: center;
+html {
+  margin: 0;
+  height: 100%;
 }
 
-.card{
-	display: inline-block;
-	width: var(--card_size);
-	height: var(--card_size);
-	margin: var(--card_margin);
-	font-size: calc(var(--card_size)*0.5);
-	line-height: var(--card_size);
-	border-radius: 15%;
-	box-sizing: border-box;
-	/*border: 1px solid gold;*/
-}
-.revealed{
-	/*background-color: rgb(141, 120, 0);*/
-	/*background-size: cover;*/
-}
-.hidden{
-	color: transparent;
-	cursor: pointer;
-	background-color: var(--card_color);
-	/*background-size: 0 0;*/
-}
-.gone{
-	background: #111;
-	color: transparent;
-	pointer-events: none;
-	/*background-size: 0 0;*/
-	border: none;
-}
-.inactive{
-	display: none;
-}
-.end_caption{
-	user-select: none;
-	color: white;
-	height: 10vh;
-	font-size: 4vw;
-	margin-top: 45vh;
+body {
+  background-color: #111;
+  font-family: Helvetica;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  text-align: center;
 }
 
-#grid{
-	text-align: center;
+.card {
+  display: inline-block;
+  width: var(--card_size);
+  height: var(--card_size);
+  margin: var(--card_margin);
+  font-size: calc(var(--card_size) * 0.5);
+  line-height: var(--card_size);
+  border-radius: 15%;
+  box-sizing: border-box;
+}
+.revealed {
+}
+.hidden {
+  color: transparent;
+  cursor: pointer;
+  background-color: var(--card_color);
+}
+.gone {
+  background: #111;
+  color: transparent;
+  pointer-events: none;
+  border: none;
+}
+.inactive {
+  display: none;
+}
+.end_caption {
+  user-select: none;
+  color: white;
+  height: 10vh;
+  font-size: 4vw;
+  margin-top: 45vh;
 }
 
+#grid {
+  text-align: center;
+}

@@ -508,4 +508,4 @@ function createShips(_out) {
   }
 }
 
-window.onload = setup();
+window.onload = setup;
