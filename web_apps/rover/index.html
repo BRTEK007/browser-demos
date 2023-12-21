@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="google" content="notranslate" />
+    <link rel="stylesheet" type="text/css" href="theme.css" />
+    <title>rover</title>
+  </head>
+
+  <body>
+    <div id="holder">
+      <div class="optionDiv" chosen="true" onclick="select_priority(this, 0)">
+        DEPTH
+      </div>
+      <div class="optionDiv" chosen="false" onclick="select_priority(this, 1)">
+        BREADTH
+      </div>
+      <div class="optionDiv" chosen="false" onclick="select_priority(this, 2)">
+        CLOSEST
+      </div>
+      <div class="optionDiv" chosen="false" onclick="select_priority(this, 3)">
+        RANDOM
+      </div>
+    </div>
+    <canvas oncontextmenu="return false;" id="myCanvas"></canvas>
+    <script src="script.js"></script>
+  </body>
+</html>

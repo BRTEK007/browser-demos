@@ -1,0 +1,87 @@
+body {
+	background-color: rgb(50, 50, 50);
+	text-align: center;
+	color: rgb(210, 210, 210);
+	overflow-x: hidden;
+	font-family: Consolas;
+	width: 100%;
+}
+
+html, body{
+	margin: 0;
+	padding: 0;
+}
+
+.entry {
+	display: inline-block;
+	width: 700px;
+	height: 300px;
+	margin: 50px;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: [first] 300px [line2] 400px [end];
+	grid-template-rows: [row1-start] 75px [row1-end] 150px [third-line] 75px [last-line];
+}
+
+.grid-item {
+	background-color: rgb(30, 30, 30);
+	border: 1px solid rgb(210, 210, 210);
+}
+
+.entry .description {
+	grid-row-end: span 2;
+	text-align: left;
+	/* padding: 10px; */
+}
+
+.description a {
+	color: rgb(30, 210, 210);
+}
+
+.entry .short {
+	line-height: 75px;
+	font-size: 25px;
+	font-weight: 900;
+}
+
+.entry .buttons {
+	text-align: left;
+	line-height: 75px;
+}
+
+.buttons a{
+	height: 45px;
+	margin: 15px;
+	font-size: 15px;
+	cursor: pointer;
+	display: inline-block;
+	background-color: rgb(210, 210, 210);
+	line-height: 45px;
+	text-decoration: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: 900;
+	color:rgb(30, 30, 30);
+}
+
+.entry .cover {
+	grid-row-end: span 2;
+}
+
+.cover img{
+	width: 600px;
+	height: 500px;
+}
+
+.categoryNameDiv{
+	width: 300px;
+	background-color: rgb(30, 30, 30);
+	border: 1px solid rgb(210, 210, 210);
+	border-left: 0;
+	font-size: 30px;
+	padding: 5px;
+	margin: 50px;
+	margin-left: 0;
+}

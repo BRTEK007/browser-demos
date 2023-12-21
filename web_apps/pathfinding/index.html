@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="google" content="notranslate" />
+    <title>Pathfinding!</title>
+    <link rel="stylesheet" href="theme.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div id="left">
+      <canvas id="canvas1" oncontextmenu="return false;"></canvas>
+    </div>
+
+    <div id="titleDiv" oncontextmenu="return false;">Pathfinding!</div>
+
+    <div id="right" oncontextmenu="return false;">
+      <div id="coverDiv" style="display: none"></div>
+
+      <div class="settingDiv">
+        <label for="size">cell size:</label>
+        <input
+          type="range"
+          min="20"
+          max="40"
+          value="30"
+          name="size"
+          onchange="changeSettings('SIZE', this.value);"
+        />
+      </div>
+
+      <hr />
+      <div id="heuristicsDiv" class="settingDiv">
+        <label for="heuristics">distance heuristics:</label>
+        <select
+          name="heuristics"
+          onchange="changeSettings('HEURISTICS', this.value);"
+        >
+          <option value="NONE">NONE</option>
+          <option value="EUKLIDES">EUKLIDES</option>
+          <option value="MANHATTAN">MANHATTAN</option>
+          <option value="CHEBYSHEW">CHEBYSHEW</option>
+          <option value="OCTILE">OCTILE</option>
+        </select>
+      </div>
+
+      <hr />
+
+      <div class="settingDiv">
+        <button onclick="button_FILLWALL();">FILL WITH WALL</button>
+      </div>
+
+      <hr />
+
+      <div class="settingDiv">
+        <label for="speed">speed:</label>
+        <input
+          type="range"
+          step="5"
+          min="1"
+          max="51"
+          value="26"
+          name="speed"
+          onchange="changeSettings('SPEED', this.value);"
+        />
+      </div>
+
+      <hr />
+
+      <div class="settingDiv">
+        <button onclick="button_RUN();" id="runButton">RUN</button>
+      </div>
+
+      <hr />
+
+      <div class="settingDiv">
+        <button onclick="button_RESET();">RESET</button>
+      </div>
+
+      <hr />
+
+      <div class="settingDiv">
+        <label
+          >time: <span id="info_1">N/D</span> [ms], <br />
+          searched nodes: <span id="info_2">N/D</span>, <br />
+          path length: <span id="info_3">N/D</span></label
+        >
+      </div>
+    </div>
+  </body>
+</html>

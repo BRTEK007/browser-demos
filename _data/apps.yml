@@ -1,0 +1,69 @@
+- category: NOT GAMES
+  entires:
+    - dir: projection
+      short: meshes & projection
+      description:
+        - mesh generation
+        - projection
+
+    - dir: mazes
+      short: maze generation
+      description:
+        - visualization of maze generation algorithms (RDFS, Kruskal, Prim)
+
+    - dir: pathfinding
+      short: pathfinding
+      description:
+        - Dijkstra, A* visualization
+        - 4 possible heuristics
+
+    - dir: genetic
+      short: genetic algorithm
+      description:
+        - pathfinding via genetic algorithm
+        - manipulate population and selection settings
+        - path editing
+
+- category: GAMES
+  entires:
+    - dir: platformer
+      short: platformer game
+      description:
+        - 2d platformer game
+        - 2d physics
+        - level editor
+
+    - dir: pairs
+      short: matching pairs
+      description:
+        - game of matching pairs
+        - play against bot
+
+    - dir: battleships
+      short: battleships
+      description:
+        - play against bot
+
+    - dir: godzilla
+      short: GSTC
+      description:
+        - Godzilla, save the city!
+        - Big reptile saves the infrastructure from hairless monkeys
+        - game jam entry
+
+- category: CONCEPTS
+  entires:
+    - dir: ropes
+      short: fabrik
+      description:
+        - fabrik / cloth / string simulation
+
+    - dir: boids
+      short: boids
+      description:
+        - flocking behavior
+
+    - dir: rover
+      short: rover
+      description:
+        - rover scans room and makes a map

@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="google" content="notranslate" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="theme.css" />
+    <title>projection</title>
+  </head>
+
+  <body onload="setup()">
+    <canvas oncontextmenu="return false;" id="myCanvas"></canvas>
+    <div id="menuDiv">
+      <label>FOV:</label>
+      <input
+        onchange="DOM_change_fov(this.value)"
+        type="range"
+        min="10"
+        max="160"
+        value="50"
+      />
+      <select id="selectS" onchange="DOM_change_shape(this.value)">
+        <option selected value="P">prism</option>
+        <option value="S">spheroid</option>
+        <option value="G">gear</option>
+      </select>
+      <div id="menus">
+        <div id="menuP">
+          <label>verticies:</label>
+          <input
+            onchange="DOM_change_verticies(this.value)"
+            type="range"
+            min="3"
+            max="10"
+            value="4"
+          />
+          <br />
+          <label>antiprism:</label>
+          <input onchange="DOM_change_anti(this.checked)" type="checkbox" />
+        </div>
+        <div id="menuS" hidden="true">
+          <label>resolution:</label>
+          <input
+            onchange="DOM_change_resolution(this.value)"
+            type="range"
+            min="3"
+            max="30"
+            value="10"
+            step="1"
+          />
+        </div>
+        <div id="menuG" hidden="true">
+          <label>teeth:</label>
+          <br />
+          <input
+            onchange="DOM_change_teeth(this.value)"
+            type="range"
+            min="2"
+            max="10"
+            value="5"
+            step="1"
+          />
+        </div>
+      </div>
+      <br />
+      <label>force triangles:</label>
+      <input onchange="DOM_change_triangles(this.checked)" type="checkbox" />
+      <label>wireframe:</label>
+      <input onchange="DOM_change_wireframe(this.checked)" type="checkbox" />
+      <label>rotation(x,y,z):</label>
+      <input
+        onchange="DOM_change_rotation('X', this.value)"
+        type="range"
+        min="-0.02"
+        max="0.02"
+        step="0.01"
+        value="0.01"
+      />
+      <input
+        onchange="DOM_change_rotation('Y', this.value)"
+        type="range"
+        min="-0.02"
+        max="0.02"
+        step="0.01"
+        value="0.01"
+      />
+      <input
+        onchange="DOM_change_rotation('Z', this.value)"
+        type="range"
+        min="-0.02"
+        max="0.02"
+        step="0.01"
+        value="0"
+      />
+      <button onclick="DOM_reset_rotation()">reset rotation</button>
+      <label>scale(x,y,z):</label>
+      <input
+        onchange="DOM_change_scale('X', this.value)"
+        type="range"
+        min="0"
+        max="2"
+        step="0.2"
+        value="1"
+      />
+      <input
+        onchange="DOM_change_scale('Y', this.value)"
+        type="range"
+        min="0"
+        max="2"
+        step="0.2"
+        value="1"
+      />
+      <input
+        onchange="DOM_change_scale('Z', this.value)"
+        type="range"
+        min="0"
+        max="2"
+        step="0.2"
+        value="1"
+      />
+      <label
+        >verticies: <span>?</span> <br />
+        triangles: <span>?</span
+        ><!-- <br> rendered: <span>10</span>--></label
+      >
+      <button onclick="DOM_download()">DOWNLOAD .obj</button>
+    </div>
+  </body>
+</html>

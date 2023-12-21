@@ -1,0 +1,109 @@
+---
+layout: default
+title: browser-demos
+---
+
+<style>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .categoryNameDiv {
+    width: 420px;
+    border: 1px solid black;
+    border-left: 0;
+    font-size: 42px;
+    padding: 5px;
+    margin: 50px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .entry {
+    display: inline-block;
+    margin: 50px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 300px 400px;
+    grid-template-rows: 65px 160px 42px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "cover short"
+      "cover description"
+      "bottom bottom";
+    border: 1px solid black;
+  }
+
+  .bottom {
+    grid-area: bottom;
+    border-top: 1px solid black;
+  }
+
+  .bottom a {
+    background-color: #4466a0;
+    color: #f5ac16;
+    font-weight: 900;
+    text-align: center;
+    display: block;
+    line-height: 42px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  .bottom a:hover {
+    background-color: #1669f5;
+    color: #f5d916;
+  }
+
+  .cover {
+    grid-area: cover;
+  }
+
+  .cover img {
+    width: 300px;
+    height: 225px;
+  }
+
+  .short {
+    grid-area: short;
+    border-bottom: 1px solid black;
+    text-align: center;
+    line-height: 65px;
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  .description {
+    grid-area: description;
+  }
+
+  .description ul {
+    text-align: left;
+  }
+</style>
+
+{% for category in site.data.apps %}
+<div class="categoryNameDiv">{{ category.category }}</div>
+{% for app in category.entires %}
+<div class="entry">
+  <div class="grid">
+    <div class="cover"><img src="web_apps/{{ app.dir }}/cover.png" /></div>
+    <div class="short">{{ app.short }}</div>
+    <div class="description">
+      <ul>
+        {% for line in app.description %}
+        <li>{{ line }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="bottom"><a href="web_apps/{{ app.dir }}">OPEN</a></div>
+  </div>
+</div>
+{% endfor %} {% endfor %}

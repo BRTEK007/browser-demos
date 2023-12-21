@@ -1,0 +1,69 @@
+html,
+body {
+    margin: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+body {
+    font-family: Consolas;
+}
+
+#left,
+#right,
+#titleDiv {
+    display: inline-block;
+    margin: 0;
+}
+
+#titleDiv {
+    position: fixed;
+    width: 200px;
+    height: 60px;
+    z-index: 1;
+    left: calc(100% - 200px);
+    box-sizing: border-box;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    background-color: rgb(60, 60, 60);
+    color: rgb(220, 220, 220);
+}
+
+#left {
+    width: calc(100% - 200px);
+    height: 100%;
+    position: fixed;
+}
+
+#right {
+    position: absolute;
+    width: 200px;
+    left: calc(100% - 200px);
+    top: 60px;
+    box-sizing: border-box;
+    border-left: 2px solid white;
+    min-height: calc(100% - 60px);
+    background-color: rgb(30, 30, 30);
+    color: rgb(200, 200, 200);
+}
+
+#right div {
+    box-sizing: border-box;
+    width: 180px;
+    margin: 10px;
+}
+
+#right div button,
+input[type="range"] {
+    width: 100%;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}

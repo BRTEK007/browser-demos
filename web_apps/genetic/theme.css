@@ -1,0 +1,45 @@
+html,
+body {
+    margin: 0;
+    /* overflow: hidden; */
+    user-select: none;
+}
+
+body {
+    font-family: Consolas;
+}
+
+#canvas1 {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+#menuDiv {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    /*text-align: center;*/
+    background-color: black;
+    border: 1px solid white;
+    /*opacity: 0.8;*/
+    cursor: move;
+    right: 0;
+    top: 0;
+}
+
+#menuDiv div {
+    color: white;
+    margin: 2px;
+}
+
+#menuDiv button,
+input,
+select {
+    margin: 2px;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,110 @@
+html,body{
+  user-select: none;
+  margin: 0; 
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Consolas';
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+canvas{
+    position: absolute;
+    left: calc((100% - 1728px) / 2);
+    top: calc((100% - 960px) / 2);
+    height: 960px;
+    width: 1728px;
+    image-rendering: -moz-crisp-edges;
+  	image-rendering: -webkit-crisp-edges;
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+    display: inline-block;
+    /*border: 1px solid red;*/
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 45vw;
+    height: 10px;
+    border-radius: 5px;  
+    background: #e4e3e3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #c00582;
+    cursor: pointer;
+}
+  
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+#finishedMenu {
+  color : white;
+  width: 100%;
+  height: 90vh;
+  margin-top: 10vh;
+  display: none;
+}
+
+#finishedMenu .title{
+    font-size: 80px;
+}
+
+#finishedMenu .box{
+    width: 400px;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    display: inline-block;
+}
+
+#finishedMenu .box .title{
+    font-size: 50px;
+}
+
+#finishedMenu .box .number{
+    font-size: 200px;
+}
+
+#caption1{
+    color: #222;
+    animation: blink 1s infinite;
+    margin-top: 60px;
+    font-size: 40px;
+}
+
+@keyframes blink {
+    0% {color: #555;}
+    50% {color: #222;}
+    100% {color: #555;}
+}
+
+#frameCounterDiv{
+    color: white;
+    width: 120px;
+    height: 60px;
+    font-size: 50px;
+    border: 1px solid white;
+    border-top: none;
+    position: absolute;
+    left: calc(50vw - 60px);
+    text-align: center;
+    top: 0;
+    z-index: 1;
+}

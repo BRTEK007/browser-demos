@@ -1,0 +1,77 @@
+canvas{
+	image-rendering: -moz-crisp-edges;
+  	image-rendering: -webkit-crisp-edges;
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+	display: block;
+	position: absolute;
+	width: 100%;
+	margin: 0;
+	height: 100%;
+	z-index: -1;
+}
+
+html, body{
+	margin: 0; 
+	height: 100%;
+	overflow: hidden;
+}
+
+body{
+	font-family: Consolas;
+	background-color: #000;
+	user-select: none;
+}
+
+#titleDiv{
+	color: white;
+	font-size: 40px;
+	font-weight: 700;
+	padding-top: 25px;
+}
+
+#menusHolderDiv{
+	height: 70vh;
+}
+
+#menu0{
+	margin-top: 40vh;
+}
+
+#menu1{
+	margin-top: 20vh;
+}
+
+#centerDiv{
+	height: 100vh;
+	width: 24vw;
+	margin-left: 38vw;
+	background-color: #000;
+	border: 1px solid white;
+	border-top: none;
+	border-bottom: none;
+}
+
+#footerDiv{
+	margin-top: 16vh;
+	color: rgb(80, 80, 80);
+}
+
+.buttonDiv{
+	color: white;
+	margin-bottom: 30px;
+	font-size: 20px;
+}
+
+.buttonDiv[selected = "true"]{
+	font-size: 30px;
+	color: yellow;
+}
+
+.menu[active = "true"]{
+	display: inline-block;
+}
+
+.menu[active = "false"]{
+	display: none;
+}

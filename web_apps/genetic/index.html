@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="google" content="notranslate" />
+    <title>genetic algorythm!</title>
+    <link rel="stylesheet" href="theme.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body onload="pageLoaded()">
+    <canvas id="canvas1" oncontextmenu="return false;"></canvas>
+    <div id="menuDiv">
+      <div id="menu1">
+        <div>generation: <span id="GEN_SPAN">0</span></div>
+        <div>success rate(%): <span id="SR_SPAN">0</span></div>
+        <div>mutation rate(%):</div>
+        <input
+          id="input_MR"
+          type="number"
+          value="5"
+          min="0"
+          max="100"
+          onchange="DOM_MR_change(this.value)"
+        />
+        <div>protected genes range(%):</div>
+        <input
+          id="input_PG"
+          type="range"
+          value="0"
+          min="0"
+          max="100"
+          onchange="DOM_PG_change(this.value)"
+        />
+        <div>population size:</div>
+        <input
+          id="input_PS"
+          type="number"
+          value="50"
+          min="2"
+          max="100"
+          onchange="DOM_PS_change(this.value)"
+        />
+        <div>evolution method:</div>
+        <select id="input_EM" onchange="DOM_EM_change(this.value)">
+          <option value="CLONING">cloning standard</option>
+          <option value="CLONING_BEST">cloning the best</option>
+          <option value="PARENTS">2 parents crossover</option>
+        </select>
+        <div>fitness factor:</div>
+        <select id="input_FF" onchange="DOM_FF_change(this.value)">
+          <option value="LINEAR">linear</option>
+          <option value="QUADRATIC">quadratic</option>
+        </select>
+        <div>keep best:</div>
+        <input type="checkbox" checked onchange="DOM_KB_change(this.checked)" />
+        <br />
+        <button onclick="DOM_SKIP_press()">SKIP 50 GENERATIONS</button>
+        <br />
+        <button onclick="DOM_FAST_press()">FAST MODE</button>
+        <br />
+        <button onclick="DOM_EDIT_press()">EDIT COURSE</button>
+        <br />
+        <button onclick="DOM_RESET_press()">RESET</button>
+      </div>
+      <div id="menu2" class="hidden">
+        <div>LMB to place tiles</div>
+        <br />
+        <button onclick="DOM_CANCEL_press()">CANCEL</button>
+        <br />
+        <button onclick="DOM_CLEAR_press()">CLEAR</button>
+        <br />
+        <button onclick="DOM_DONE_press()">DONE</button>
+        <br />
+      </div>
+      <div id="menu3" class="hidden">
+        <div>generation:<span id="GEN_SPAN_FAST">1</span></div>
+        <br />
+        <button onclick="DOM_STOP_press()">STOP</button>
+      </div>
+    </div>
+  </body>
+</html>

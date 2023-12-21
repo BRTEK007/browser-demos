@@ -1,0 +1,59 @@
+canvas{
+    width: 85vh;
+    height: 95vh;
+    image-rendering: -moz-crisp-edges;
+  	image-rendering: -webkit-crisp-edges;
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+    margin-top: 1vh;
+}
+body{
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body,html{
+    overflow: hidden;
+    margin: 0;
+    /*height: 100%;*/
+}
+table{
+    width: 100%; 
+}
+h3{
+    color: red;
+}
+img {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+.btn{
+    color: white;
+    font-size: 24px;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+    width: 420px;
+    text-align: center;
+}
+#icon{
+    border: 4px solid;
+    border-color: red blue blue red;
+    width: 300px;
+    padding: 70px 0 70px 0;
+}
+
+#main_holder{
+    margin-top: 10%;
+}
+
+#editor_canvas{
+    width: 912px;
+    height: 912px;
+    border: 1px solid white;
+}
+
+#navCaption{
+    color: rgb(80, 80, 80);
+    margin-top: 30vh;
+}

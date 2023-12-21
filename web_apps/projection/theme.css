@@ -1,0 +1,51 @@
+body{
+	background-color: black;
+    font-family: consolas;
+    overflow: hidden;
+	height: 100%;
+	margin: 0;
+    user-select: none;
+}
+canvas{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+    image-rendering: -moz-crisp-edges;
+  	image-rendering: -webkit-crisp-edges;
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+    cursor: crosshair;
+}
+
+#menuDiv{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    border: 1px solid white;
+    right: 0;
+    top: 0;
+}
+a{
+    color: #6666FF;
+}
+#menuDiv label{
+    color: white;
+    margin: 2px;
+    display: inline-block;
+}
+
+#menuDiv div{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+#menuDiv button, input, select{
+    margin: 2px;
+    display: inline-block;
+}
+

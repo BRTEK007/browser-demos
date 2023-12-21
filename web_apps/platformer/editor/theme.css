@@ -1,0 +1,105 @@
+canvas{
+	border: 1px solid white;
+	width: 85vw;
+	height: 85vh;
+	display: block;
+}
+
+html, body{
+	margin: 0; 
+	height: 100%;
+	overflow: hidden;
+}
+
+body{
+	font-family: Consolas;
+	background-color: #111;
+	user-select: none;
+	image-rendering: -moz-crisp-edges;
+  	image-rendering: -webkit-crisp-edges;
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+}
+
+label{
+	color : white;
+}
+
+.tileChoiceDiv[chosen="false"] img{
+	opacity: 0.3; 
+    background-color: rgb(73, 73, 73); 
+}
+
+.settingSwitchDiv[state="off"] img{
+	opacity: 0.3; 
+	background-color: rgb(73, 73, 73);
+}
+
+input[type = "file"]{
+	display: none;
+}
+
+.buttonsHolderDiv{
+	display : inline-block;
+	margin : 0 1vw;
+}
+
+.buttonsHolderDiv div{
+	width : 6vh;
+	height : 6vh;
+	margin : 0.5vh;
+	display : inline-block;
+	cursor : pointer;
+	border : 1px solid yellow;
+}
+
+.buttonsHolderDiv img{
+	image-rendering: pixelated;
+	width: 90%;
+	height: 90%;
+	margin: 4px;
+}
+
+.canvasPopup{
+	border-radius: 5%;
+	background-color: indigo;
+	position: absolute;
+	display: inline-block;
+}
+
+.editorPopup{
+	left : 50%;
+	top : 50%;
+	border-radius: 5%;
+	background-color: indigo;
+	position: absolute;
+	display: inline-block;
+}
+
+.canvasPopup button{
+	width : 100px;
+	margin : 5px;
+	display: block;
+}
+
+#editPopup{
+	left : 100px;
+	top : 0;
+	display: none;
+}
+
+#monsterOffsetEditPopup{
+	left : 220px;
+	top : 0;
+	display: none;
+}
+
+#resizePopup{
+	display: none;
+}
+
+#monsterRangeEditPopup{
+	left : 650px;
+	top : 200px;
+	display: none;
+}

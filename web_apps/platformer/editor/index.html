@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" >
+	<meta name="google" content="notranslate">
+	<title>3-bit platformer</title>
+
+	<script src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="theme.css">
+
+</head>
+
+<body onload="windowLoaded()" oncontextmenu="return false">
+
+
+	<div id="headbar_div" align="center">
+
+		<canvas id="myCanvas"></canvas>
+
+		<div class = "buttonsHolderDiv">
+
+		<div class="tileChoiceDiv" chosen="true" onclick="changeTileButton(0, this)">
+			<img src="icons/icon_wall.png">
+		</div>
+
+		<div class="tileChoiceDiv" chosen="false" onclick="changeTileButton(1, this)">
+			<img src="icons/icon_spikes_auto.png">
+		</div>
+
+		<div class="tileChoiceDiv" chosen="false" onclick="changeTileButton(5, this)">
+			<img src="icons/icon_movingSpikes.png">
+		</div>
+
+		<div class="tileChoiceDiv" chosen="false" onclick="changeTileButton(6, this)">
+			<img src="icons/icon_monsterSide.png">
+		</div>
+
+		<div class="tileChoiceDiv" chosen="false" onclick="changeTileButton(7, this)">
+			<img src="icons/icon_monsterFlying.png">
+		</div>
+
+		<div class="tileChoiceDiv" chosen="false" onclick="changeTileButton(8, this)">
+			<img src="icons/icon_monsterDropper.png">
+		</div>
+
+		<div class="tileChoiceDiv" chosen="false" onclick="changeTileButton(9, this)">
+			<img src="icons/icon_monsterRocket.png">
+		</div>
+
+		<div class="tileChoiceDiv" chosen="false" onclick="changeTileButton(-1, this)">
+			<img src="icons/icon_config.png">
+		</div>
+
+		<div class="tileChoiceDiv" chosen="false" onclick="changeTileButton(2, this)">
+			<img src="icons/icon_player.png">
+		</div>
+
+		<div class="tileChoiceDiv" chosen="false" onclick="changeTileButton(4, this)">
+			<img src="icons/icon_coin.png">
+		</div>
+
+		</div>
+
+		<div class = "buttonsHolderDiv">
+
+		<div class="settingSwitchDiv" on="on" onclick="switchGridButton(this)">
+			<img src="icons/icon_grid.png">
+		</div>
+
+		</div>
+
+		<div class = "buttonsHolderDiv">
+
+		<div class="editorFunctionDiv" onclick="buttonCenter()">
+			<img src="icons/icon_center.png">
+		</div>
+
+		<div class="editorFunctionDiv" onclick="buttonPlay()">
+			<img src="icons/icon_playButton.png">
+		</div>
+
+		<div class="editorFunctionDiv" onclick="buttonUpload()">
+			<img src="icons/icon_upload.png">
+		</div>
+
+		<div class="editorFunctionDiv" onclick="buttonDownload()">
+			<img src="icons/icon_download.png">
+		</div>
+
+
+		</div>
+
+		<div class = "buttonsHolderDiv">
+		<div class="editorFunctionDiv" onclick="buttonHelp()">
+			<img src="icons/icon_help.png">
+		</div>
+	</div>
+
+		<input id = "inputFile" type="file" onchange="loadFromFile(this.files[0])" accept=".json, .txt" multiple>
+
+		<div class = "canvasPopup" id = "monsterOffsetEditPopup">
+			<label for="idleTime">offset in frames:</label>
+			<input type="number" id="offsetInput" min="0" max="20" value="0">
+			<button onclick = 'saveChangesMonsterOffset()'>save</button>
+			<button onclick = "closePopup('monsterOffsetEditPopup')">cancel</button>
+		</div>
+
+		<div class = "canvasPopup" id = "monsterRangeEditPopup">
+			<label for="rangeNInput">range negative:</label>
+			<input type="number" id="rangeNInput" min="0" max="10" value = "2">
+			<label for="rangePInput">range positive:</label>
+			<input type="number" id="rangePInput" min="0" max="10" value = "2">
+			<button onclick = 'saveChangesMonsterRange()'>save</button>
+			<button onclick = "closePopup('monsterRangeEditPopup')">cancel</button>
+		</div>
+
+		<div class = "editorPopup" id = "resizePopup">
+			<table>
+				<tr>
+					<th></th>
+					<th><input type="number" id="resizeTopInput" min="0" max="100" value = "0"></th>
+					<th></th>
+				</tr>	
+				<tr>
+					<th><input type="number" id="resizeLeftInput" min="0" max="100" value = "0"></th>
+					<th></th>
+					<th><input type="number" id="resizeRightInput" min="0" max="100" value = "0"></th>
+				</tr>
+				<tr>
+					<th></th>
+					<th><input type="number" id="resizeBottomInput" min="0" max="100" value = "0"></th>
+					<th></th>
+				</tr>
+			</table>
+
+			<button onclick = 'buttonResizeConfirm()'>apply</button>
+			<button onclick = "closePopup('resizePopup')">cancel</button>
+		</div>
+
+</body>
+
+</html>

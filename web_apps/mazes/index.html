@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="google" content="notranslate" />
+    <title>Maze Generator!</title>
+    <link rel="stylesheet" href="theme.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body onload="pageLoaded()">
+    <div id="left">
+      <canvas id="canvas1"></canvas>
+    </div>
+
+    <div id="titleDiv" oncontextmenu="return false;">Maze generator!</div>
+
+    <div id="right" oncontextmenu="return false;">
+      <div>
+        <label for="size">cell size:</label>
+        <input
+          type="range"
+          min="1"
+          max="20"
+          value="10"
+          name="size"
+          onchange="changeSettings('SIZE', this.value);"
+        />
+      </div>
+
+      <hr />
+
+      <div>
+        <label for="size2">wall size:</label>
+        <input
+          type="range"
+          min="1"
+          max="20"
+          value="1"
+          name="size2"
+          onchange="changeSettings('SPACING', this.value);"
+        />
+      </div>
+
+      <hr />
+
+      <div>
+        <label for="algorythm">algorythm:</label>
+        <select
+          name="algorythm"
+          onchange="changeSettings('ALGORYTHM', this.value);"
+        >
+          <option value="RDFS">RDFS</option>
+          <option value="KRUSKAL">Kruskal</option>
+          <option value="PRIM">Prim</option>
+          <!--<option value="ELLER">Eller</option>-->
+        </select>
+      </div>
+
+      <hr />
+
+      <div>
+        <label for="speed">speed:</label>
+        <input
+          type="range"
+          step="5"
+          min="1"
+          max="101"
+          value="51"
+          name="speed"
+          onchange="changeSettings('SPEED', this.value);"
+        />
+      </div>
+
+      <hr />
+
+      <div>
+        <button onclick="startGeneration();">START</button>
+      </div>
+
+      <hr />
+
+      <div>
+        <button onclick="clearGeneration();">CLEAR</button>
+      </div>
+    </div>
+  </body>
+</html>
